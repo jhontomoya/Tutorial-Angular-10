@@ -1,0 +1,31 @@
+<!--
+    <div>
+        <button *ngIf="isLogged">Iniciar sesion</button>
+    </div>
+    <div>
+        <button *ngIf="isLogged">Registrarse</button>
+    </div>
+-->
+
+<ng-container *ngIf="!isLogged; else tmplogged">
+    <div>
+        <button (click)="changeLogged(true)">Iniciar sesion</button>
+    </div>
+    <div>
+        <button>Registrarse</button>
+    </div>
+    <div>
+        <button (click)="addLevel()">Nivel</button>
+        <p>Nivel actual: {{level}}</p>
+    </div>
+</ng-container>
+
+<ng-template #tmplogged>
+    <button>Administración</button>
+    <button>Perfil</button>
+    <button (click)="changeLogged(false)">Cerra sesion</button> 
+</ng-template>
+
+<div>
+    <button *ngIf="level >= 10">VIP</button>
+</div>

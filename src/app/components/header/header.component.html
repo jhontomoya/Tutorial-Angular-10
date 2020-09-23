@@ -1,0 +1,23 @@
+<div>
+    <p>Hello {{name}}</p>
+    <p>Request {{numRequest}}</p>
+    <ul>
+        <li *ngFor="let num of arr">{{num}}</li>
+    </ul>
+</div>
+<div>
+    <button (click) = "changeName()">
+        Cambiar Nombre
+    </button>
+</div>
+<div>
+    <button (click) = "addRequest()">
+        Enviar
+    </button>
+</div>
+<div>
+    <button (click) = "addNumber()">
+        Agregar Número
+    </button>
+</div>
+
